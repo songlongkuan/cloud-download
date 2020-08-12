@@ -1,0 +1,58 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<style>
+    p {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+</style>
+<head>
+    <title>Cloud Download</title>
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- Custom Theme files -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords"
+          content="Flat Search Box Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <!--Google Fonts-->
+
+</head>
+<body>
+
+<!--search start here-->
+<div class="search">
+    <div class="s-bar">
+        <form target="stop">
+            <input type="text" id="input_link">
+            <input type="submit" value="Download" onclick="createDownload()"/>
+        </form>
+        <iframe name="stop" style="display:none;"></iframe>
+
+    </div>
+    <p style="margin-left: 100px" id="download_link"></p>
+</div>
+<!--search end here-->
+<div class="copyright">
+    <p><a href="https://github.com/pencilso/cloud-download" target="_blank"> 前往Github </a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/js-base64@3.4.5/base64.min.js"></script>
+<script>
+    function createDownload() {
+        var doman = window.location.protocol + "//" + window.location.host;
+        var value = document.getElementById("input_link").value;
+        var downloadLink = doman + "/api/download/" + Base64.encode(value)
+        document.getElementById("download_link").innerText = downloadLink
+    }
+</script>
+</body>
+</html>
