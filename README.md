@@ -10,7 +10,7 @@
 
 
 ## Docker 构建 （推荐）
-docker push pencilso/cloud-download:1.0
+docker pull pencilso/cloud-download:1.0
 
 docker run -dit --name cloud-download -p 8080:8080 pencilso/cloud-download:1.0
 
